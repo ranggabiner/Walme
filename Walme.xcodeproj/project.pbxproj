@@ -15,7 +15,6 @@
 		8F339B402C219A22008D13A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B3F2C219A20008D13A7 /* User.swift */; };
 		8F339B422C219A2D008D13A7 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B412C219A28008D13A7 /* SignInView.swift */; };
 		8F339B442C219A34008D13A7 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B432C219A30008D13A7 /* SignInViewModel.swift */; };
-		8F339B462C219A41008D13A7 /* SupabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B452C219A39008D13A7 /* SupabaseClient.swift */; };
 		8F339B4B2C219ACE008D13A7 /* ClanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B4A2C219AC9008D13A7 /* ClanManager.swift */; };
 		8F339B4D2C219B80008D13A7 /* InitialPersonalitationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B4C2C219B80008D13A7 /* InitialPersonalitationView.swift */; };
 		8F339B4F2C219B99008D13A7 /* InitialPersonalitationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B4E2C219B8F008D13A7 /* InitialPersonalitationViewModel.swift */; };
@@ -40,6 +39,9 @@
 		8F339B772C21A0F2008D13A7 /* JoinClanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B762C21A0EA008D13A7 /* JoinClanDetailView.swift */; };
 		8F339B7B2C21A111008D13A7 /* JoinClanDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B7A2C21A10B008D13A7 /* JoinClanDetailViewModel.swift */; };
 		8F339B7D2C21A16A008D13A7 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B7C2C21A167008D13A7 /* UserManager.swift */; };
+		8F339B7F2C21A338008D13A7 /* SignInApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B7E2C21A333008D13A7 /* SignInApple.swift */; };
+		8F339B812C21AC76008D13A7 /* SupabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B802C21AC71008D13A7 /* SupabaseService.swift */; };
+		8F339B832C21B012008D13A7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B822C21B00F008D13A7 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +53,6 @@
 		8F339B3F2C219A20008D13A7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8F339B412C219A28008D13A7 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		8F339B432C219A30008D13A7 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-		8F339B452C219A39008D13A7 /* SupabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseClient.swift; sourceTree = "<group>"; };
 		8F339B4A2C219AC9008D13A7 /* ClanManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanManager.swift; sourceTree = "<group>"; };
 		8F339B4C2C219B80008D13A7 /* InitialPersonalitationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPersonalitationView.swift; sourceTree = "<group>"; };
 		8F339B4E2C219B8F008D13A7 /* InitialPersonalitationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPersonalitationViewModel.swift; sourceTree = "<group>"; };
@@ -76,6 +77,9 @@
 		8F339B762C21A0EA008D13A7 /* JoinClanDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinClanDetailView.swift; sourceTree = "<group>"; };
 		8F339B7A2C21A10B008D13A7 /* JoinClanDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinClanDetailViewModel.swift; sourceTree = "<group>"; };
 		8F339B7C2C21A167008D13A7 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		8F339B7E2C21A333008D13A7 /* SignInApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInApple.swift; sourceTree = "<group>"; };
+		8F339B802C21AC71008D13A7 /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
+		8F339B822C21B00F008D13A7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +146,8 @@
 			children = (
 				8F339B7C2C21A167008D13A7 /* UserManager.swift */,
 				8F339B4A2C219AC9008D13A7 /* ClanManager.swift */,
-				8F339B452C219A39008D13A7 /* SupabaseClient.swift */,
+				8F339B802C21AC71008D13A7 /* SupabaseService.swift */,
+				8F339B7E2C21A333008D13A7 /* SignInApple.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 				8F339B642C219E8A008D13A7 /* ProfileView.swift */,
 				8F339B6C2C219F99008D13A7 /* EditNicknameView.swift */,
 				8F339B6A2C219F7E008D13A7 /* EditDailyStepsGoalView.swift */,
+				8F339B822C21B00F008D13A7 /* MainTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -269,8 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F339B7F2C21A338008D13A7 /* SignInApple.swift in Sources */,
 				8F339B752C21A03A008D13A7 /* JoinClanViewModel.swift in Sources */,
 				8F339B5B2C219CAA008D13A7 /* MyClanViewModel.swift in Sources */,
+				8F339B832C21B012008D13A7 /* MainTabView.swift in Sources */,
 				8F339B552C219C1E008D13A7 /* CreateClanView.swift in Sources */,
 				8F339B512C219BFE008D13A7 /* ClanOptionView.swift in Sources */,
 				8F339B4D2C219B80008D13A7 /* InitialPersonalitationView.swift in Sources */,
@@ -289,10 +297,10 @@
 				8F339B5D2C219D4C008D13A7 /* DailyQuestsView.swift in Sources */,
 				8F339B7D2C21A16A008D13A7 /* UserManager.swift in Sources */,
 				8F339B402C219A22008D13A7 /* User.swift in Sources */,
+				8F339B812C21AC76008D13A7 /* SupabaseService.swift in Sources */,
 				8F339B4B2C219ACE008D13A7 /* ClanManager.swift in Sources */,
 				8F339B632C219E62008D13A7 /* LeaderboadViewModel.swift in Sources */,
 				8F339B612C219E54008D13A7 /* LeaderboardView.swift in Sources */,
-				8F339B462C219A41008D13A7 /* SupabaseClient.swift in Sources */,
 				8F339B672C219E95008D13A7 /* ProfileViewModel.swift in Sources */,
 				8F339B442C219A34008D13A7 /* SignInViewModel.swift in Sources */,
 				8F339B6B2C219F91008D13A7 /* EditDailyStepsGoalView.swift in Sources */,
