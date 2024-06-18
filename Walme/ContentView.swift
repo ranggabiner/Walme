@@ -8,14 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var appUser: Users? = nil
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            if let appUser = appUser {
+                if let personalitation = appUser.isCompleted {
+//                    MainTabView(appUser: appUser)
+                    InitialPersonalitationView(viewModel: InitialPersonalitationViewModel(appUser: appUser), viewModelProfile: ProfileViewModel(appUser: appUser), appUser: $appUser)
+                    ProfileView(viewModel: ProfileViewModel(appUser: appUser), appUser: $appUser)
+
+                } else {
+                    VStack {
+                        InitialPersonalitationView(viewModel: InitialPersonalitationViewModel(appUser: appUser), viewModelProfile: ProfileViewModel(appUser: appUser), appUser: $appUser)
+                        ProfileView(viewModel: ProfileViewModel(appUser: appUser), appUser: $appUser)
+                    }
+                }
+            } else {
+                SignInView(appUser: $appUser)
+            }
         }
-        .padding()
+        .onAppear {
+            Task {
+                self.appUser = try? await UserManager.shared.getCurrentSession()
+            }
+        }
     }
 }
 

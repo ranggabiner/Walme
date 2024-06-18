@@ -21,8 +21,17 @@ struct SignInView: View {
                     }
                 }
             } label: {
-                Text("Sign in with Apple")
-                    .foregroundStyle(Color(.black))
+                HStack {
+                    Image(systemName: "applelogo")
+                        .foregroundColor(.white)
+                    Text("Continue with Apple")
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundColor(.white)
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.black)
+                .cornerRadius(25)
             }
         }
         .padding()
@@ -33,5 +42,5 @@ struct SignInView: View {
 }
 
 #Preview {
-    SignInView(appUser: .constant(.init(id: "1234", email: "jajang@gmail.com", name: "Jajang")))
+    SignInView(appUser: .constant(.init(id: "1234", email: "jajang@gmail.com", nickname: "Jajang")))
 }

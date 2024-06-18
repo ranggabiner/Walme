@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @State var appUser: Users? = nil
+
     var body: some View {
         TabView {
             LeaderboardView()
@@ -25,7 +27,7 @@ struct MainTabView: View {
                     Label("Daily Quests", systemImage: "list.bullet.clipboard")
                 }
             
-            ProfileView()
+            ProfileView(viewModel: ProfileViewModel(appUser: appUser), appUser: $appUser)
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }

@@ -80,6 +80,7 @@
 		8F339B7E2C21A333008D13A7 /* SignInApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInApple.swift; sourceTree = "<group>"; };
 		8F339B802C21AC71008D13A7 /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
 		8F339B822C21B00F008D13A7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		8F339B842C21C75F008D13A7 /* Walme.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Walme.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +115,7 @@
 		8F339B282C2199BA008D13A7 /* Walme */ = {
 			isa = PBXGroup;
 			children = (
+				8F339B842C21C75F008D13A7 /* Walme.entitlements */,
 				8F339B3E2C219A0A008D13A7 /* Models */,
 				8F339B3D2C219A07008D13A7 /* Views */,
 				8F339B3C2C2199FB008D13A7 /* ViewModels */,
@@ -158,10 +160,10 @@
 				8F339B432C219A30008D13A7 /* SignInViewModel.swift */,
 				8F339B4E2C219B8F008D13A7 /* InitialPersonalitationViewModel.swift */,
 				8F339B522C219C01008D13A7 /* ClanOptionViewModel.swift */,
-				8F339B562C219C22008D13A7 /* CreateClanViewModel.swift */,
 				8F339B742C21A035008D13A7 /* JoinClanViewModel.swift */,
 				8F339B7A2C21A10B008D13A7 /* JoinClanDetailViewModel.swift */,
 				8F339B5A2C219CA4008D13A7 /* MyClanViewModel.swift */,
+				8F339B562C219C22008D13A7 /* CreateClanViewModel.swift */,
 				8F339B5E2C219D5C008D13A7 /* DailyQuestsViewModel.swift */,
 				8F339B622C219E5C008D13A7 /* LeaderboadViewModel.swift */,
 				8F339B662C219E92008D13A7 /* ProfileViewModel.swift */,
@@ -437,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Walme/Walme.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Walme/Preview Content\"";
@@ -466,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Walme/Walme.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Walme/Preview Content\"";
