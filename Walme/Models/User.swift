@@ -18,7 +18,7 @@ struct Users: Codable {
         case id
         case email
         case nickname
-        case dailyStepGoals = "daily_steps_goal" // Sesuaikan dengan nama kolom di database
-        case isCompleted = "is_completed" // Sesuaikan dengan nama kolom di database
+        case dailyStepGoals = "daily_steps_goal"
+        case isCompleted = "is_completed"
     }
 }

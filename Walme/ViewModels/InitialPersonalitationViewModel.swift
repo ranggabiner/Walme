@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Combine
 
 class InitialPersonalitationViewModel: ObservableObject {
     @Published var appUser: Users?
@@ -15,6 +14,7 @@ class InitialPersonalitationViewModel: ObservableObject {
     @Published var showNicknameError: Bool = false
     @Published var isCompleted: Bool = false
     @Published var showStepsError: Bool = false
+    @Published var isActivityStarted: Bool = false
     var alertMessage: String = ""
     
     private let userManager = UserManager.shared
@@ -22,7 +22,6 @@ class InitialPersonalitationViewModel: ObservableObject {
     init(appUser: Users?) {
         self.appUser = appUser
     }
-
     
     func validateNickname() {
         showNicknameError = nickname.isEmpty
@@ -45,6 +44,10 @@ class InitialPersonalitationViewModel: ObservableObject {
         } else if showStepsError {
             alertMessage = "Required minimum steps is 2000"
         } else {
+            // save the status completed initial personalitation
+            UserDefaults.standard.set(true, forKey: "isActivityStarted")
+            isActivityStarted = true
+
             guard let userId = appUser?.id else {
                 print("User ID not available")
                 return
@@ -58,7 +61,7 @@ class InitialPersonalitationViewModel: ObservableObject {
             let newUser = Users(id: userId, email: userEmail, nickname: nickname, dailyStepGoals: dailySteps, isCompleted: isCompleted)
             
             do {
-                let isSuccess = try await userManager.insertNickname(newUser)
+                let isSuccess = try await userManager.insertPersonalitation(newUser)
                     
                 if isSuccess {
                     appUser?.nickname = nickname

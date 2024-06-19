@@ -29,9 +29,8 @@ class UserManager {
         try await client.auth.signOut()
     }
     
-    func insertNickname(_ username: Users) async throws -> Bool {
+    func insertPersonalitation(_ username: Users) async throws -> Bool {
         let insertResponse = try await client.database.from("users").insert(username).execute()
         return insertResponse.status == 201
     }
-
 }

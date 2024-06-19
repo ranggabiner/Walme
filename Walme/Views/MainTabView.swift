@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainTabView: View {
-    @State var appUser: Users? = nil
+    @Binding var appUser: Users?
 
     var body: some View {
         TabView {
@@ -36,5 +36,5 @@ struct MainTabView: View {
 }
 
 #Preview {
-    MainTabView()
+    MainTabView(appUser: .constant(Users(id: "1234")))
 }

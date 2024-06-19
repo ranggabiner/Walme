@@ -9,20 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     @State var appUser: Users? = nil
-    
+    @State var isActivityStarted: Bool = false
+
     var body: some View {
         ZStack {
             if let appUser = appUser {
-                if let personalitation = appUser.isCompleted {
-//                    MainTabView(appUser: appUser)
-                    InitialPersonalitationView(viewModel: InitialPersonalitationViewModel(appUser: appUser), viewModelProfile: ProfileViewModel(appUser: appUser), appUser: $appUser)
-                    ProfileView(viewModel: ProfileViewModel(appUser: appUser), appUser: $appUser)
-
+                if isActivityStarted {
+                    MainTabView(appUser: $appUser)
                 } else {
-                    VStack {
-                        InitialPersonalitationView(viewModel: InitialPersonalitationViewModel(appUser: appUser), viewModelProfile: ProfileViewModel(appUser: appUser), appUser: $appUser)
-                        ProfileView(viewModel: ProfileViewModel(appUser: appUser), appUser: $appUser)
-                    }
+                    InitialPersonalitationView(viewModel: InitialPersonalitationViewModel(appUser: appUser), appUser: $appUser, isActivityStarted: $isActivityStarted)
                 }
             } else {
                 SignInView(appUser: $appUser)
@@ -31,6 +26,7 @@ struct ContentView: View {
         .onAppear {
             Task {
                 self.appUser = try? await UserManager.shared.getCurrentSession()
+                self.isActivityStarted = UserDefaults.standard.bool(forKey: "isActivityStarted")
             }
         }
     }
@@ -39,3 +35,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+

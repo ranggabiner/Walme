@@ -9,12 +9,13 @@ import SwiftUI
 
 struct InitialPersonalitationView: View {
     @ObservedObject var viewModel: InitialPersonalitationViewModel
-    @ObservedObject var viewModelProfile: ProfileViewModel
     @Binding var appUser: Users?
+    @Binding var isActivityStarted: Bool
 
-    
     var body: some View {
         VStack(spacing: 20) {
+            Text("Set your daily steps")
+
             TextField("Nickname", text: $viewModel.nickname)
                 .padding()
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(viewModel.showNicknameError ? Color.red : Color.gray, lineWidth: 1))
@@ -55,8 +56,8 @@ struct InitialPersonalitationView: View {
             Button(action: {
                 Task {
                     await viewModel.startActivity()
-                    if let updatedUser = viewModel.appUser {
-                        appUser = updatedUser
+                    if viewModel.isActivityStarted {
+                        isActivityStarted = true
                     }
                 }
             }) {
@@ -67,20 +68,11 @@ struct InitialPersonalitationView: View {
                     .background(Color.yellow)
                     .cornerRadius(10)
             }
-            Button(action: {
-                Task {
-                    await viewModelProfile.signOut()
-                    appUser = nil
-                }
-            }) {
-                Text("Logout")
-                    .foregroundColor(.red)
-            }
         }
         .padding()
     }
 }
 
 #Preview {
-    InitialPersonalitationView(viewModel: InitialPersonalitationViewModel(appUser: .init(id: "1234")), viewModelProfile: ProfileViewModel(appUser: .init(id: "123", email: "john@gmail.com", nickname: "John")), appUser: .constant(.init(id: "1234")))
+    InitialPersonalitationView(viewModel: InitialPersonalitationViewModel(appUser: .init(id: "1234")), appUser: .constant(.init(id: "1234")), isActivityStarted: .constant(false))
 }
