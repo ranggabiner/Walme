@@ -45,6 +45,12 @@
 		8F339B7F2C21A338008D13A7 /* SignInApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B7E2C21A333008D13A7 /* SignInApple.swift */; };
 		8F339B812C21AC76008D13A7 /* SupabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B802C21AC71008D13A7 /* SupabaseService.swift */; };
 		8F339B832C21B012008D13A7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B822C21B00F008D13A7 /* MainTabView.swift */; };
+		EFD1852F2C2435A300D8EDFA /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = EFD1852E2C2435A300D8EDFA /* Auth */; };
+		EFD185312C2435A300D8EDFA /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = EFD185302C2435A300D8EDFA /* Functions */; };
+		EFD185332C2435A300D8EDFA /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = EFD185322C2435A300D8EDFA /* PostgREST */; };
+		EFD185352C2435A300D8EDFA /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = EFD185342C2435A300D8EDFA /* Realtime */; };
+		EFD185372C2435A300D8EDFA /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = EFD185362C2435A300D8EDFA /* Storage */; };
+		EFD185392C243B2400D8EDFA /* HealthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD185382C243B2400D8EDFA /* HealthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +94,7 @@
 		8F339B802C21AC71008D13A7 /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
 		8F339B822C21B00F008D13A7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8F339B842C21C75F008D13A7 /* Walme.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Walme.entitlements; sourceTree = "<group>"; };
+		EFD185382C243B2400D8EDFA /* HealthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +102,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD185372C2435A300D8EDFA /* Storage in Frameworks */,
+				EFD185332C2435A300D8EDFA /* PostgREST in Frameworks */,
+				EFD185312C2435A300D8EDFA /* Functions in Frameworks */,
+				EFD1852F2C2435A300D8EDFA /* Auth in Frameworks */,
+				EFD185352C2435A300D8EDFA /* Realtime in Frameworks */,
 				8F339B3A2C2199F1008D13A7 /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +199,7 @@
 				8F339B4A2C219AC9008D13A7 /* ClanManager.swift */,
 				8F339B802C21AC71008D13A7 /* SupabaseService.swift */,
 				8F339B7E2C21A333008D13A7 /* SignInApple.swift */,
+				EFD185382C243B2400D8EDFA /* HealthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -254,6 +267,11 @@
 			name = Walme;
 			packageProductDependencies = (
 				8F339B392C2199F1008D13A7 /* Supabase */,
+				EFD1852E2C2435A300D8EDFA /* Auth */,
+				EFD185302C2435A300D8EDFA /* Functions */,
+				EFD185322C2435A300D8EDFA /* PostgREST */,
+				EFD185342C2435A300D8EDFA /* Realtime */,
+				EFD185362C2435A300D8EDFA /* Storage */,
 			);
 			productName = Walme;
 			productReference = 8F339B262C2199BA008D13A7 /* Walme.app */;
@@ -338,6 +356,7 @@
 				8F339B402C219A22008D13A7 /* User.swift in Sources */,
 				8F339B812C21AC76008D13A7 /* SupabaseService.swift in Sources */,
 				8F339B4B2C219ACE008D13A7 /* ClanManager.swift in Sources */,
+				EFD185392C243B2400D8EDFA /* HealthService.swift in Sources */,
 				8F339B632C219E62008D13A7 /* LeaderboadViewModel.swift in Sources */,
 				8F339B612C219E54008D13A7 /* LeaderboardView.swift in Sources */,
 				8F339B672C219E95008D13A7 /* ProfileViewModel.swift in Sources */,
@@ -573,6 +592,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8F339B372C2199E7008D13A7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
+		};
+		EFD1852E2C2435A300D8EDFA /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Auth;
+		};
+		EFD185302C2435A300D8EDFA /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Functions;
+		};
+		EFD185322C2435A300D8EDFA /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PostgREST;
+		};
+		EFD185342C2435A300D8EDFA /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Realtime;
+		};
+		EFD185362C2435A300D8EDFA /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Storage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
