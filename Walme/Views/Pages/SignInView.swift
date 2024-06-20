@@ -25,7 +25,7 @@ struct SignInView: View {
                     Image(systemName: "applelogo")
                         .foregroundColor(.white)
                     Text("Continue with Apple")
-                        .font(.system(size: 16, weight: .semibold))
+                        .font(.system(size: UIConfig.FontSizes.nano, weight: .semibold))
                         .foregroundColor(.white)
                 }
                 .frame(maxWidth: .infinity)
