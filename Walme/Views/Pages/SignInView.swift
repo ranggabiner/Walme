@@ -14,7 +14,7 @@ struct SignInView: View {
     var body: some View {
         VStack {
             ButtonAction(
-                buttonText: "Continue with Apple",
+                buttonText: Strings.Login.continueWithApple,
                 textColor: .white,
                 rectanglePrimaryColor: Color(.black),
                 rectangleSecondaryColor: Color(red: 0.25, green: 0.25, blue: 0.25),
@@ -28,10 +28,10 @@ struct SignInView: View {
                         }
                     }
                 },
-                buttonImage: .system(name: "applelogo")
+                buttonImage: .system(name: Strings.Login.logo)
             )
         }
-        .padding()
+        .padding(UIConfig.Paddings.huge)
         .alert(isPresented: $viewModel.showErrorAlert) {
             Alert(title: Text("Error"), message: Text(viewModel.errorMessage ?? ""), dismissButton: .default(Text("OK")))
         }

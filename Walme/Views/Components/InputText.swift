@@ -22,9 +22,9 @@ struct InputText: View {
                         .stroke(showError ? Color.red : Color.gray, lineWidth: 1)
                 )
                 .overlay(
-                    Image(systemName: "exclamationmark.circle.fill")
+                    Image(systemName: Strings.PersonalizeGoal.iconError)
                         .foregroundColor(Color.red)
-                        .padding()
+                        .padding(UIConfig.Paddings.large)
                         .opacity(showError ? 1 : 0),
                     alignment: .trailing
                 )
@@ -41,9 +41,9 @@ struct InputText: View {
 
 struct InputText_Previews: PreviewProvider {
     @State static var field: String = ""
-    static var textField: String = "Nickname"
+    static var textField: String = Strings.PersonalizeGoal.nickName
 
     static var previews: some View {
-        InputText(textField: textField, field: $field, showError: true, errorMessage: "Required field")
+        InputText(textField: textField, field: $field, showError: true, errorMessage: Strings.PersonalizeGoal.nicknameError)
     }
 }
