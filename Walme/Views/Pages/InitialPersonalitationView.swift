@@ -16,43 +16,21 @@ struct InitialPersonalitationView: View {
         VStack(spacing: 20) {
             Text("Set your daily steps")
 
-            TextField("Nickname", text: $viewModel.nickname)
-                .padding()
-                .overlay(RoundedRectangle(cornerRadius: 10).stroke(viewModel.showNicknameError ? Color.red : Color.gray, lineWidth: 1))
-                .overlay(
-                    Image(systemName: "exclamationmark.circle.fill")
-                        .foregroundColor(Color.red)
-                        .padding()
-                        .opacity(viewModel.showNicknameError ? 1 : 0),
-                    alignment: .trailing
-                )
-            
-            if viewModel.showNicknameError {
-                Text("Required Nickname")
-                    .font(.footnote)
-                    .foregroundColor(.red)
-                    .padding(.leading)
-            }
-            
-            TextField("Set your daily steps", text: $viewModel.dailySteps)
-                .keyboardType(.numberPad)
-                .padding()
-                .overlay(RoundedRectangle(cornerRadius: 10).stroke(viewModel.showStepsError ? Color.red : Color.gray, lineWidth: 1))
-                .overlay(
-                    Image(systemName: "exclamationmark.circle.fill")
-                        .foregroundColor(Color.red)
-                        .padding()
-                        .opacity(viewModel.showStepsError ? 1 : 0),
-                    alignment: .trailing
-                )
-            
-            if viewModel.showStepsError {
-                Text("Required minimum steps is 2000")
-                    .font(.footnote)
-                    .foregroundColor(.red)
-                    .padding(.leading)
-            }
-            
+            InputText(
+                textField: "Nickname",
+                field: $viewModel.nickname,
+                showError: viewModel.showNicknameError,
+                errorMessage: "Required Nickname"
+            )
+
+            InputText(
+                textField: "Set your daily steps",
+                field: $viewModel.dailySteps,
+                showError: viewModel.showStepsError,
+                errorMessage: "Required minimum steps is 2000"
+            )
+            .keyboardType(.numberPad)
+
             Button(action: {
                 Task {
                     await viewModel.startActivity()
