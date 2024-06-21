@@ -13,41 +13,42 @@ struct InitialPersonalitationView: View {
     @Binding var isActivityStarted: Bool
 
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Set your daily steps")
-
+        VStack(spacing: UIConfig.Spacings.large) {
+            
             InputText(
-                textField: "Nickname",
+                textField: Strings.PersonalizeGoal.nickName,
                 field: $viewModel.nickname,
                 showError: viewModel.showNicknameError,
-                errorMessage: "Required Nickname"
+                errorMessage: Strings.PersonalizeGoal.nickName
             )
 
             InputText(
-                textField: "Set your daily steps",
+                textField: Strings.PersonalizeGoal.setYourDailyGoal,
                 field: $viewModel.dailySteps,
                 showError: viewModel.showStepsError,
-                errorMessage: "Required minimum steps is 2000"
+                errorMessage: Strings.PersonalizeGoal.stepsError
             )
             .keyboardType(.numberPad)
-
-            Button(action: {
-                Task {
-                    await viewModel.startActivity()
-                    if viewModel.isActivityStarted {
-                        isActivityStarted = true
+            
+            ButtonAction(
+                buttonText: Strings.PersonalizeGoal.startActivity,
+                textColor: .white,
+                rectanglePrimaryColor: Color(red: 0.92, green: 0.69, blue: 0.17),
+                rectangleSecondaryColor: Color(red: 1, green: 0.75, blue: 0.19),
+                strokeColor: .white,
+                buttonWidth: .long,
+                action: {
+                    Task {
+                        await viewModel.startActivity()
+                        if viewModel.isActivityStarted {
+                            isActivityStarted = true
+                        }
                     }
-                }
-            }) {
-                Text("Start Activity")
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.yellow)
-                    .cornerRadius(10)
-            }
+                },
+                buttonImage: .none
+            )
         }
-        .padding()
+        .padding(UIConfig.Paddings.huge)
     }
 }
 

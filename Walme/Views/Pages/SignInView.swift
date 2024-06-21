@@ -13,28 +13,25 @@ struct SignInView: View {
 
     var body: some View {
         VStack {
-            Button {
-                Task {
-                    await viewModel.signInWithApple()
-                    if viewModel.appUser != nil {
-                        appUser = viewModel.appUser
+            ButtonAction(
+                buttonText: Strings.Login.continueWithApple,
+                textColor: .white,
+                rectanglePrimaryColor: Color(.black),
+                rectangleSecondaryColor: Color(red: 0.25, green: 0.25, blue: 0.25),
+                strokeColor: .white,
+                buttonWidth: .long,
+                action: {
+                    Task {
+                        await viewModel.signInWithApple()
+                        if viewModel.appUser != nil {
+                            appUser = viewModel.appUser
+                        }
                     }
-                }
-            } label: {
-                HStack {
-                    Image(systemName: "applelogo")
-                        .foregroundColor(.white)
-                    Text("Continue with Apple")
-                        .font(.system(size: UIConfig.FontSizes.nano, weight: .semibold))
-                        .foregroundColor(.white)
-                }
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(Color.black)
-                .cornerRadius(25)
-            }
+                },
+                buttonImage: .system(name: Strings.Login.logo)
+            )
         }
-        .padding()
+        .padding(UIConfig.Paddings.huge)
         .alert(isPresented: $viewModel.showErrorAlert) {
             Alert(title: Text("Error"), message: Text(viewModel.errorMessage ?? ""), dismissButton: .default(Text("OK")))
         }
