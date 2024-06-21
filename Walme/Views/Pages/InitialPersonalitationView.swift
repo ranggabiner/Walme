@@ -30,22 +30,24 @@ struct InitialPersonalitationView: View {
                 errorMessage: "Required minimum steps is 2000"
             )
             .keyboardType(.numberPad)
-
-            Button(action: {
-                Task {
-                    await viewModel.startActivity()
-                    if viewModel.isActivityStarted {
-                        isActivityStarted = true
+            
+            ButtonAction(
+                buttonText: "Start Activity",
+                textColor: .white,
+                rectanglePrimaryColor: Color(red: 0.92, green: 0.69, blue: 0.17),
+                rectangleSecondaryColor: Color(red: 1, green: 0.75, blue: 0.19),
+                strokeColor: .white,
+                buttonWidth: .long,
+                action: {
+                    Task {
+                        await viewModel.startActivity()
+                        if viewModel.isActivityStarted {
+                            isActivityStarted = true
+                        }
                     }
-                }
-            }) {
-                Text("Start Activity")
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.yellow)
-                    .cornerRadius(10)
-            }
+                },
+                buttonImage: .none
+            )
         }
         .padding()
     }
