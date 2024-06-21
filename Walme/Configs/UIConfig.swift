@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 protocol Sizable {
     static var nano   : Double { get set }
     static var micro  : Double { get set }
@@ -80,6 +81,8 @@ struct UIConfig {
         static var large  : Double = 12
         /** Represents 24px on screen */
         static var huge   : Double = 24
+        /** Represents 48px on screen */
+        static var giant   : Double = 48
     }
     
     struct Spacings : Sizable {
@@ -110,6 +113,23 @@ struct UIConfig {
         static var large  : Double = 12
         /** Represents 24px on screen */
         static var huge   : Double = 24
+    }
+    
+    struct HeightFrameSizes : Sizable {
+        /** Represents 16px on screen */
+        static var nano   : Double = 16
+        /** Represents 24px on screen */
+        static var micro  : Double = 24
+        /** Represents 36px on screen */
+        static var mini   : Double = 36
+        /** Represents 48px on screen */
+        static var normal : Double = 48
+        /** Represents 56px on screen */
+        static var large  : Double = 56
+        /** Represents 64px on screen */
+        static var huge   : Double = 64.0
+        /** Represents 72px on screen */
+        static var giant  : Double = 72
     }
     
 }

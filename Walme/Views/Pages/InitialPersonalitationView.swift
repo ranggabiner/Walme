@@ -13,26 +13,25 @@ struct InitialPersonalitationView: View {
     @Binding var isActivityStarted: Bool
 
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Set your daily steps")
-
+        VStack(spacing: UIConfig.Spacings.large) {
+            
             InputText(
-                textField: "Nickname",
+                textField: Strings.PersonalizeGoal.nickName,
                 field: $viewModel.nickname,
                 showError: viewModel.showNicknameError,
-                errorMessage: "Required Nickname"
+                errorMessage: Strings.PersonalizeGoal.nickName
             )
 
             InputText(
-                textField: "Set your daily steps",
+                textField: Strings.PersonalizeGoal.setYourDailyGoal,
                 field: $viewModel.dailySteps,
                 showError: viewModel.showStepsError,
-                errorMessage: "Required minimum steps is 2000"
+                errorMessage: Strings.PersonalizeGoal.stepsError
             )
             .keyboardType(.numberPad)
             
             ButtonAction(
-                buttonText: "Start Activity",
+                buttonText: Strings.PersonalizeGoal.startActivity,
                 textColor: .white,
                 rectanglePrimaryColor: Color(red: 0.92, green: 0.69, blue: 0.17),
                 rectangleSecondaryColor: Color(red: 1, green: 0.75, blue: 0.19),
@@ -49,7 +48,7 @@ struct InitialPersonalitationView: View {
                 buttonImage: .none
             )
         }
-        .padding()
+        .padding(UIConfig.Paddings.huge)
     }
 }
 

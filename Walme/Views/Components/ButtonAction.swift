@@ -46,26 +46,26 @@ struct ButtonAction: View {
                 ZStack {
                     Rectangle()
                         .foregroundColor(.clear)
-                        .frame(width: buttonFrameWidth(screenWidth: geometry.size.width), height: 48)
+                        .frame(width: buttonFrameWidth(screenWidth: geometry.size.width), height: UIConfig.HeightFrameSizes.normal)
                         .background(rectanglePrimaryColor)
-                        .cornerRadius(48)
+                        .cornerRadius(UIConfig.CornerRadiuses.giant)
                         .overlay(
-                            RoundedRectangle(cornerRadius: 48)
+                            RoundedRectangle(cornerRadius: UIConfig.CornerRadiuses.giant)
                                 .inset(by: -1)
                                 .stroke(strokeColor, lineWidth: 2)
                         )
                         .shadow(
                             color: Color(red: 0, green: 0, blue: 0, opacity: 0.25),
-                            radius: 4,
+                            radius: UIConfig.CornerRadiuses.micro,
                             y: 4
                         )
                     Rectangle()
                         .foregroundColor(.clear)
-                        .frame(width: buttonFrameWidth(screenWidth: geometry.size.width) - 20, height: 24)
+                        .frame(width: buttonFrameWidth(screenWidth: geometry.size.width) - 20, height: UIConfig.HeightFrameSizes.micro)
                         .background(rectangleSecondaryColor)
-                        .cornerRadius(56)
+                        .cornerRadius(UIConfig.CornerRadiuses.giant)
                         .offset(y: -10)
-                    HStack(spacing: 8) {
+                    HStack(spacing: UIConfig.Spacings.normal) {
                         switch buttonImage {
                         case .none:
                             EmptyView()
@@ -77,12 +77,12 @@ struct ButtonAction: View {
                                 .foregroundColor(textColor)
                         }
                         Text(buttonText)
-                            .font(.system(size: 16, weight: .semibold))
-                            .lineSpacing(24)
+                            .font(.system(size: UIConfig.FontSizes.nano, weight: .semibold))
+                            .lineSpacing(UIConfig.Spacings.large)
                             .foregroundColor(textColor)
                     }
                 }
-                .frame(width: buttonFrameWidth(screenWidth: geometry.size.width), height: 48)
+                .frame(width: buttonFrameWidth(screenWidth: geometry.size.width), height: UIConfig.HeightFrameSizes.normal)
                 .scaleEffect(isPressed ? 0.95 : 1.0)
             }
             .buttonStyle(PlainButtonStyle())
@@ -100,22 +100,20 @@ struct ButtonAction: View {
                     }
             )
         }
-        .frame(height: 48)
+        .frame(height: UIConfig.HeightFrameSizes.normal)
     }
 }
 
 #Preview {
-    VStack(spacing: 20) {
         ButtonAction(
-            buttonText: "Join Clan",
+            buttonText: Strings.Login.continueWithApple,
             textColor: .white,
             rectanglePrimaryColor: Color(red: 0.92, green: 0.69, blue: 0.17),
             rectangleSecondaryColor: Color(red: 1, green: 0.75, blue: 0.19),
             strokeColor: .white,
             buttonWidth: .long,
             action: { print("Button Clicked!") },
-            buttonImage: .system(name: "applelogo")
+            buttonImage: .system(name: Strings.Login.logo)
         )
-    }
-    .padding()
+        .padding(UIConfig.Paddings.huge)
 }
