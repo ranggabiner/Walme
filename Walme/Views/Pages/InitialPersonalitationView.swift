@@ -13,63 +13,42 @@ struct InitialPersonalitationView: View {
     @Binding var isActivityStarted: Bool
 
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Set your daily steps")
+        VStack(spacing: UIConfig.Spacings.large) {
+            
+            InputText(
+                textField: Strings.PersonalizeGoal.nickName,
+                field: $viewModel.nickname,
+                showError: viewModel.showNicknameError,
+                errorMessage: Strings.PersonalizeGoal.nickName
+            )
 
-            TextField("Nickname", text: $viewModel.nickname)
-                .padding()
-                .overlay(RoundedRectangle(cornerRadius: 10).stroke(viewModel.showNicknameError ? Color.red : Color.gray, lineWidth: 1))
-                .overlay(
-                    Image(systemName: "exclamationmark.circle.fill")
-                        .foregroundColor(Color.red)
-                        .padding()
-                        .opacity(viewModel.showNicknameError ? 1 : 0),
-                    alignment: .trailing
-                )
+            InputText(
+                textField: Strings.PersonalizeGoal.setYourDailyGoal,
+                field: $viewModel.dailySteps,
+                showError: viewModel.showStepsError,
+                errorMessage: Strings.PersonalizeGoal.stepsError
+            )
+            .keyboardType(.numberPad)
             
-            if viewModel.showNicknameError {
-                Text("Required Nickname")
-                    .font(.footnote)
-                    .foregroundColor(.red)
-                    .padding(.leading)
-            }
-            
-            TextField("Set your daily steps", text: $viewModel.dailySteps)
-                .keyboardType(.numberPad)
-                .padding()
-                .overlay(RoundedRectangle(cornerRadius: 10).stroke(viewModel.showStepsError ? Color.red : Color.gray, lineWidth: 1))
-                .overlay(
-                    Image(systemName: "exclamationmark.circle.fill")
-                        .foregroundColor(Color.red)
-                        .padding()
-                        .opacity(viewModel.showStepsError ? 1 : 0),
-                    alignment: .trailing
-                )
-            
-            if viewModel.showStepsError {
-                Text("Required minimum steps is 2000")
-                    .font(.footnote)
-                    .foregroundColor(.red)
-                    .padding(.leading)
-            }
-            
-            Button(action: {
-                Task {
-                    await viewModel.startActivity()
-                    if viewModel.isActivityStarted {
-                        isActivityStarted = true
+            ButtonAction(
+                buttonText: Strings.PersonalizeGoal.startActivity,
+                textColor: .white,
+                rectanglePrimaryColor: Color(red: 0.92, green: 0.69, blue: 0.17),
+                rectangleSecondaryColor: Color(red: 1, green: 0.75, blue: 0.19),
+                strokeColor: .white,
+                buttonWidth: .long,
+                action: {
+                    Task {
+                        await viewModel.startActivity()
+                        if viewModel.isActivityStarted {
+                            isActivityStarted = true
+                        }
                     }
-                }
-            }) {
-                Text("Start Activity")
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.yellow)
-                    .cornerRadius(10)
-            }
+                },
+                buttonImage: .none
+            )
         }
-        .padding()
+        .padding(UIConfig.Paddings.huge)
     }
 }
 
