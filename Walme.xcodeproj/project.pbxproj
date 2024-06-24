@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E59248E2C29471800D5F27C /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 0E59248D2C29471800D5F27C /* Supabase */; };
 		0E94FA662C240BE500A3429E /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 0E94FA652C240BE500A3429E /* .gitkeep */; };
 		0E94FA692C240C2E00A3429E /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E94FA682C240C2E00A3429E /* UIConfig.swift */; };
 		0EE860012C24429C00568053 /* InputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE860002C24429C00568053 /* InputText.swift */; };
@@ -525,7 +526,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ranggabiner.Walme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertheo.Walme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -559,7 +560,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ranggabiner.Walme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertheo.Walme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
