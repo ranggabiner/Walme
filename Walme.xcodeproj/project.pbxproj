@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E33251A2C257DCD002C7769 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 0E3325192C257DCD002C7769 /* Supabase */; };
 		0E94FA662C240BE500A3429E /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 0E94FA652C240BE500A3429E /* .gitkeep */; };
 		0E94FA692C240C2E00A3429E /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E94FA682C240C2E00A3429E /* UIConfig.swift */; };
 		0EE860012C24429C00568053 /* InputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE860002C24429C00568053 /* InputText.swift */; };
@@ -47,6 +46,12 @@
 		8F339B7F2C21A338008D13A7 /* SignInApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B7E2C21A333008D13A7 /* SignInApple.swift */; };
 		8F339B812C21AC76008D13A7 /* SupabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B802C21AC71008D13A7 /* SupabaseService.swift */; };
 		8F339B832C21B012008D13A7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B822C21B00F008D13A7 /* MainTabView.swift */; };
+		EF2B5F242C25813300747E58 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = EF2B5F232C25813300747E58 /* Supabase */; };
+		EF2B5F262C25813800747E58 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = EF2B5F252C25813800747E58 /* Auth */; };
+		EF2B5F282C25813800747E58 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = EF2B5F272C25813800747E58 /* Functions */; };
+		EF2B5F2A2C25813800747E58 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = EF2B5F292C25813800747E58 /* PostgREST */; };
+		EF2B5F2C2C25813800747E58 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = EF2B5F2B2C25813800747E58 /* Realtime */; };
+		EF2B5F2E2C25813800747E58 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = EF2B5F2D2C25813800747E58 /* Storage */; };
 		EFD185392C243B2400D8EDFA /* HealthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD185382C243B2400D8EDFA /* HealthService.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,7 +106,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E33251A2C257DCD002C7769 /* Supabase in Frameworks */,
+				EF2B5F2E2C25813800747E58 /* Storage in Frameworks */,
+				EF2B5F2A2C25813800747E58 /* PostgREST in Frameworks */,
+				EF2B5F282C25813800747E58 /* Functions in Frameworks */,
+				EF2B5F262C25813800747E58 /* Auth in Frameworks */,
+				EF2B5F2C2C25813800747E58 /* Realtime in Frameworks */,
+				EF2B5F242C25813300747E58 /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +272,12 @@
 			);
 			name = Walme;
 			packageProductDependencies = (
-				0E3325192C257DCD002C7769 /* Supabase */,
+				EF2B5F232C25813300747E58 /* Supabase */,
+				EF2B5F252C25813800747E58 /* Auth */,
+				EF2B5F272C25813800747E58 /* Functions */,
+				EF2B5F292C25813800747E58 /* PostgREST */,
+				EF2B5F2B2C25813800747E58 /* Realtime */,
+				EF2B5F2D2C25813800747E58 /* Storage */,
 			);
 			productName = Walme;
 			productReference = 8F339B262C2199BA008D13A7 /* Walme.app */;
@@ -293,7 +308,7 @@
 			);
 			mainGroup = 8F339B1D2C2199BA008D13A7;
 			packageReferences = (
-				0E3325182C257DB5002C7769 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */,
 			);
 			productRefGroup = 8F339B272C2199BA008D13A7 /* Products */;
 			projectDirPath = "";
@@ -493,7 +508,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Walme/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = DP3K3GBL6K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this to track you step";
@@ -576,7 +591,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0E3325182C257DB5002C7769 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+		EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/supabase/supabase-swift";
 			requirement = {
@@ -587,10 +602,35 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0E3325192C257DCD002C7769 /* Supabase */ = {
+		EF2B5F232C25813300747E58 /* Supabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0E3325182C257DB5002C7769 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
+		};
+		EF2B5F252C25813800747E58 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		EF2B5F272C25813800747E58 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		EF2B5F292C25813800747E58 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		EF2B5F2B2C25813800747E58 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		EF2B5F2D2C25813800747E58 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
