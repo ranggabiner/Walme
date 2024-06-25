@@ -19,12 +19,15 @@ class DailyQuestsViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     init() {
-        fetchStepCount(for: selectedDate)
+        healthStore.requestAuthorization{ success in
+            self.fetchStepCount(for: self.selectedDate)
+        }
         
         $selectedDate
             // subscribe selectedDate & run function if selectedDate changed
             .sink { [weak self] newDate in
                 self?.fetchStepCount(for: newDate)
+                print("Click")
             }
             // prevent memory leaks
             .store(in: &cancellables)

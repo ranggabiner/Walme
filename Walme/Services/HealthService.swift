@@ -49,6 +49,7 @@ class HealthService{
                 stepCount = sum.doubleValue(for: HKUnit.count())
             }
             
+            print(stepCount)
             DispatchQueue.main.async {
                 completion(stepCount)
             }
