@@ -10,6 +10,7 @@
 		0E94FA662C240BE500A3429E /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 0E94FA652C240BE500A3429E /* .gitkeep */; };
 		0E94FA692C240C2E00A3429E /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E94FA682C240C2E00A3429E /* UIConfig.swift */; };
 		0EE860012C24429C00568053 /* InputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE860002C24429C00568053 /* InputText.swift */; };
+		5753955A2C2AD9790020ACCC /* TreeProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575395592C2AD9790020ACCC /* TreeProgress.swift */; };
 		577136372C2AB86000919B37 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577136362C2AB86000919B37 /* HomeHeader.swift */; };
 		8F0535782C2557040010F7B7 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0535772C2557040010F7B7 /* Strings.swift */; };
 		8F08817D2C2532BD00CCA732 /* ButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08817C2C2532BD00CCA732 /* ButtonAction.swift */; };
@@ -63,6 +64,7 @@
 		0E94FA672C240C1400A3429E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0E94FA682C240C2E00A3429E /* UIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfig.swift; sourceTree = "<group>"; };
 		0EE860002C24429C00568053 /* InputText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputText.swift; sourceTree = "<group>"; };
+		575395592C2AD9790020ACCC /* TreeProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeProgress.swift; sourceTree = "<group>"; };
 		577136362C2AB86000919B37 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 		8F0535772C2557040010F7B7 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		8F08817C2C2532BD00CCA732 /* ButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAction.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		0E94FA6A2C240C4200A3429E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				575395592C2AD9790020ACCC /* TreeProgress.swift */,
 				8F339B822C21B00F008D13A7 /* MainTabView.swift */,
 				0EE860002C24429C00568053 /* InputText.swift */,
 				8F08817C2C2532BD00CCA732 /* ButtonAction.swift */,
@@ -383,6 +386,7 @@
 				8F339B442C219A34008D13A7 /* SignInViewModel.swift in Sources */,
 				8F08817D2C2532BD00CCA732 /* ButtonAction.swift in Sources */,
 				8F339B6B2C219F91008D13A7 /* EditDailyStepsGoalView.swift in Sources */,
+				5753955A2C2AD9790020ACCC /* TreeProgress.swift in Sources */,
 				8F339B652C219E8D008D13A7 /* ProfileView.swift in Sources */,
 				8F339B6F2C219FB4008D13A7 /* EditNicknameViewModel.swift in Sources */,
 				8F339B532C219C06008D13A7 /* ClanOptionViewModel.swift in Sources */,
@@ -520,7 +524,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Walme/Preview Content\"";
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = T7VZ3G3TGC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this to track you step";
@@ -537,7 +541,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.Walme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rizki.Walme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -554,7 +558,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Walme/Preview Content\"";
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = T7VZ3G3TGC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this to track you step";
@@ -571,7 +575,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.Walme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rizki.Walme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
