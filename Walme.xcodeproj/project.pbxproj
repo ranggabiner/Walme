@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E59248E2C29471800D5F27C /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 0E59248D2C29471800D5F27C /* Supabase */; };
 		0E94FA662C240BE500A3429E /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 0E94FA652C240BE500A3429E /* .gitkeep */; };
 		0E94FA692C240C2E00A3429E /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E94FA682C240C2E00A3429E /* UIConfig.swift */; };
 		0EE860012C24429C00568053 /* InputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE860002C24429C00568053 /* InputText.swift */; };
+		577136372C2AB86000919B37 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577136362C2AB86000919B37 /* HomeHeader.swift */; };
 		8F0535782C2557040010F7B7 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0535772C2557040010F7B7 /* Strings.swift */; };
 		8F08817D2C2532BD00CCA732 /* ButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08817C2C2532BD00CCA732 /* ButtonAction.swift */; };
 		8F339B2A2C2199BA008D13A7 /* WalmeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B292C2199BA008D13A7 /* WalmeApp.swift */; };
@@ -61,6 +61,7 @@
 		0E94FA672C240C1400A3429E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0E94FA682C240C2E00A3429E /* UIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfig.swift; sourceTree = "<group>"; };
 		0EE860002C24429C00568053 /* InputText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputText.swift; sourceTree = "<group>"; };
+		577136362C2AB86000919B37 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 		8F0535772C2557040010F7B7 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		8F08817C2C2532BD00CCA732 /* ButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAction.swift; sourceTree = "<group>"; };
 		8F339B262C2199BA008D13A7 /* Walme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walme.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +137,7 @@
 				8F339B822C21B00F008D13A7 /* MainTabView.swift */,
 				0EE860002C24429C00568053 /* InputText.swift */,
 				8F08817C2C2532BD00CCA732 /* ButtonAction.swift */,
+				577136362C2AB86000919B37 /* HomeHeader.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -361,6 +363,7 @@
 				8F339B772C21A0F2008D13A7 /* JoinClanDetailView.swift in Sources */,
 				8F339B732C21A022008D13A7 /* JoinClanView.swift in Sources */,
 				8F339B5D2C219D4C008D13A7 /* DailyQuestsView.swift in Sources */,
+				577136372C2AB86000919B37 /* HomeHeader.swift in Sources */,
 				8F339B7D2C21A16A008D13A7 /* UserManager.swift in Sources */,
 				8F339B402C219A22008D13A7 /* User.swift in Sources */,
 				8F339B812C21AC76008D13A7 /* SupabaseService.swift in Sources */,
