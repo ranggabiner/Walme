@@ -25,7 +25,7 @@ struct Card<Content: View>: View {
                     .stroke(.cardBorder, style: .init(
                         lineWidth: 2
                     ))
-            }.padding()
+            }
     }
 }
 
