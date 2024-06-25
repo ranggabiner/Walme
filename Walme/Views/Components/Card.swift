@@ -1,0 +1,44 @@
+//
+//  Card.swift
+//  Walme
+//
+//  Created by Dason Tiovino on 25/06/24.
+//
+
+import Foundation
+import SwiftUI
+
+struct Card<Content: View>: View {
+    var alignment: Alignment = Alignment(horizontal: .leading, vertical: .top)
+    @ViewBuilder let content: Content
+    
+    var body: some View {
+        content
+            .padding()
+            .frame(
+                maxWidth: .infinity,
+                alignment: alignment
+            )
+            .background{
+                RoundedRectangle(cornerRadius: 24)
+                    .fill(.white)
+                    .stroke(.cardBorder, style: .init(
+                        lineWidth: 2
+                    ))
+            }.padding()
+    }
+}
+
+#Preview {
+    VStack{
+        Card{
+            Text("TEST")
+        }
+        Card{
+            Text("TEST")
+        }
+        Card{
+            Text("TEST")
+        }
+    }.padding()
+}
