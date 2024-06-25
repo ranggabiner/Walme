@@ -49,7 +49,8 @@ struct ProgressBar: View {
                                     height: height / 2.5
                                 )
                                 .offset(
-                                    x: (value/total * (geometry.size.width / -6) - height / 8),
+                                    x: value <= total ? (value/total * (geometry.size.width / -6) - height / 8)
+                                        : ((geometry.size.width / -6) - height / 8),
                                     y: height / -8
                                 )
                         }
