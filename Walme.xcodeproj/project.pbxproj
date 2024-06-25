@@ -47,12 +47,13 @@
 		8F339B7F2C21A338008D13A7 /* SignInApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B7E2C21A333008D13A7 /* SignInApple.swift */; };
 		8F339B812C21AC76008D13A7 /* SupabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B802C21AC71008D13A7 /* SupabaseService.swift */; };
 		8F339B832C21B012008D13A7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F339B822C21B00F008D13A7 /* MainTabView.swift */; };
-		EF2B5F242C25813300747E58 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = EF2B5F232C25813300747E58 /* Supabase */; };
-		EF2B5F262C25813800747E58 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = EF2B5F252C25813800747E58 /* Auth */; };
-		EF2B5F282C25813800747E58 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = EF2B5F272C25813800747E58 /* Functions */; };
-		EF2B5F2A2C25813800747E58 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = EF2B5F292C25813800747E58 /* PostgREST */; };
-		EF2B5F2C2C25813800747E58 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = EF2B5F2B2C25813800747E58 /* Realtime */; };
-		EF2B5F2E2C25813800747E58 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = EF2B5F2D2C25813800747E58 /* Storage */; };
+		EFD143562C2AB9D0000A9BCB /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD143552C2AB9D0000A9BCB /* ProgressBar.swift */; };
+		EFD143582C2ABA80000A9BCB /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = EFD143572C2ABA80000A9BCB /* Auth */; };
+		EFD1435A2C2ABA80000A9BCB /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = EFD143592C2ABA80000A9BCB /* Functions */; };
+		EFD1435C2C2ABA80000A9BCB /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = EFD1435B2C2ABA80000A9BCB /* PostgREST */; };
+		EFD1435E2C2ABA80000A9BCB /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = EFD1435D2C2ABA80000A9BCB /* Realtime */; };
+		EFD143602C2ABA80000A9BCB /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = EFD1435F2C2ABA80000A9BCB /* Storage */; };
+		EFD143622C2ABA80000A9BCB /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = EFD143612C2ABA80000A9BCB /* Supabase */; };
 		EFD185392C243B2400D8EDFA /* HealthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD185382C243B2400D8EDFA /* HealthService.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		8F339B802C21AC71008D13A7 /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
 		8F339B822C21B00F008D13A7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8F339B842C21C75F008D13A7 /* Walme.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Walme.entitlements; sourceTree = "<group>"; };
+		EFD143552C2AB9D0000A9BCB /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		EFD185382C243B2400D8EDFA /* HealthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,12 +110,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF2B5F2E2C25813800747E58 /* Storage in Frameworks */,
-				EF2B5F2A2C25813800747E58 /* PostgREST in Frameworks */,
-				EF2B5F282C25813800747E58 /* Functions in Frameworks */,
-				EF2B5F262C25813800747E58 /* Auth in Frameworks */,
-				EF2B5F2C2C25813800747E58 /* Realtime in Frameworks */,
-				EF2B5F242C25813300747E58 /* Supabase in Frameworks */,
+				EFD1435C2C2ABA80000A9BCB /* PostgREST in Frameworks */,
+				EFD1435A2C2ABA80000A9BCB /* Functions in Frameworks */,
+				EFD143622C2ABA80000A9BCB /* Supabase in Frameworks */,
+				EFD143582C2ABA80000A9BCB /* Auth in Frameworks */,
+				EFD143602C2ABA80000A9BCB /* Storage in Frameworks */,
+				EFD1435E2C2ABA80000A9BCB /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +139,7 @@
 				8F339B822C21B00F008D13A7 /* MainTabView.swift */,
 				0EE860002C24429C00568053 /* InputText.swift */,
 				8F08817C2C2532BD00CCA732 /* ButtonAction.swift */,
+				EFD143552C2AB9D0000A9BCB /* ProgressBar.swift */,
 				577136362C2AB86000919B37 /* HomeHeader.swift */,
 			);
 			path = Components;
@@ -275,12 +278,12 @@
 			);
 			name = Walme;
 			packageProductDependencies = (
-				EF2B5F232C25813300747E58 /* Supabase */,
-				EF2B5F252C25813800747E58 /* Auth */,
-				EF2B5F272C25813800747E58 /* Functions */,
-				EF2B5F292C25813800747E58 /* PostgREST */,
-				EF2B5F2B2C25813800747E58 /* Realtime */,
-				EF2B5F2D2C25813800747E58 /* Storage */,
+				EFD143572C2ABA80000A9BCB /* Auth */,
+				EFD143592C2ABA80000A9BCB /* Functions */,
+				EFD1435B2C2ABA80000A9BCB /* PostgREST */,
+				EFD1435D2C2ABA80000A9BCB /* Realtime */,
+				EFD1435F2C2ABA80000A9BCB /* Storage */,
+				EFD143612C2ABA80000A9BCB /* Supabase */,
 			);
 			productName = Walme;
 			productReference = 8F339B262C2199BA008D13A7 /* Walme.app */;
@@ -360,6 +363,7 @@
 				8F339B592C219C9F008D13A7 /* MyClanView.swift in Sources */,
 				8F339B422C219A2D008D13A7 /* SignInView.swift in Sources */,
 				8F339B712C219FC9008D13A7 /* EditDailyStepsGoalViewModel.swift in Sources */,
+				EFD143562C2AB9D0000A9BCB /* ProgressBar.swift in Sources */,
 				8F339B772C21A0F2008D13A7 /* JoinClanDetailView.swift in Sources */,
 				8F339B732C21A022008D13A7 /* JoinClanView.swift in Sources */,
 				8F339B5D2C219D4C008D13A7 /* DailyQuestsView.swift in Sources */,
@@ -606,35 +610,35 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EF2B5F232C25813300747E58 /* Supabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Supabase;
-		};
-		EF2B5F252C25813800747E58 /* Auth */ = {
+		EFD143572C2ABA80000A9BCB /* Auth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Auth;
 		};
-		EF2B5F272C25813800747E58 /* Functions */ = {
+		EFD143592C2ABA80000A9BCB /* Functions */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Functions;
 		};
-		EF2B5F292C25813800747E58 /* PostgREST */ = {
+		EFD1435B2C2ABA80000A9BCB /* PostgREST */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = PostgREST;
 		};
-		EF2B5F2B2C25813800747E58 /* Realtime */ = {
+		EFD1435D2C2ABA80000A9BCB /* Realtime */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Realtime;
 		};
-		EF2B5F2D2C25813800747E58 /* Storage */ = {
+		EFD1435F2C2ABA80000A9BCB /* Storage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Storage;
+		};
+		EFD143612C2ABA80000A9BCB /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
