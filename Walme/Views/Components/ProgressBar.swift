@@ -20,7 +20,7 @@ struct ProgressBar: View {
                     .fill(.white)
                     .stroke(.finishedColor1, lineWidth: 2)
                 
-                if(value < 250){
+                if (value < 250) {
                     Capsule()
                         .fill(.personalProgressColor1)
                         .frame(width: 250/total * geometry.size.width)
@@ -36,7 +36,7 @@ struct ProgressBar: View {
                                     y: height / -8
                                 )
                         }
-                }else{
+                } else {
                     Capsule()
                         .fill(.personalProgressColor1)
                         .frame(width: value <= total ? value/total * geometry.size.width : geometry.size.width)
@@ -55,7 +55,8 @@ struct ProgressBar: View {
                         }
                 }
             }
-        }.frame(height: height)
+        }
+        .frame(height: height)
         .padding()
     }
 }
