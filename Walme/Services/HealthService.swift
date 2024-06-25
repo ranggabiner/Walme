@@ -42,18 +42,27 @@ class HealthService{
         let end = Calendar.current.date(byAdding: .day, value: 1, to: start)!
         
         let predicate = HKQuery.predicateForSamples(withStart: start, end: end, options: .strictStartDate)
-        let query = HKStatisticsQuery(quantityType: stepType, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, _ in
-            var stepCount = 0.0
-            
-            if let result = result, let sum = result.sumQuantity() {
-                stepCount = sum.doubleValue(for: HKUnit.count())
-            }
-            
-            DispatchQueue.main.async {
-                completion(stepCount)
-            }
-        }
         
+        let query = HKObserverQuery(sampleType: stepType, predicate: predicate) { query, completionHandler, error in
+            if let error = error {
+                print("Error observing step count: \(error)")
+                return
+            }
+            
+            let statsQuery = HKStatisticsQuery(quantityType: stepType, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, _ in
+                var stepCount = 0.0
+                
+                if let result = result, let sum = result.sumQuantity() {
+                    stepCount = sum.doubleValue(for: HKUnit.count())
+                }
+                
+                DispatchQueue.main.async {
+                    completion(stepCount)
+                }
+            }
+            store.execute(statsQuery)
+            completionHandler()
+        }
         store.execute(query)
     }
     
@@ -68,18 +77,27 @@ class HealthService{
         let end = Calendar.current.date(byAdding: .day, value: 1, to: start)!
         
         let predicate = HKQuery.predicateForSamples(withStart: start, end: end, options: .strictStartDate)
-        let query = HKStatisticsQuery(quantityType: stepType, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, _ in
-            var stepCount = 0.0
-            
-            if let result = result, let sum = result.sumQuantity() {
-                stepCount = sum.doubleValue(for: HKUnit.count())
-            }
-            
-            DispatchQueue.main.async {
-                completion(stepCount)
-            }
-        }
         
+        let query = HKObserverQuery(sampleType: stepType, predicate: predicate) { query, completionHandler, error in
+            if let error = error {
+                print("Error observing step count: \(error)")
+                return
+            }
+            
+            let statsQuery = HKStatisticsQuery(quantityType: stepType, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, _ in
+                var stepCount = 0.0
+                
+                if let result = result, let sum = result.sumQuantity() {
+                    stepCount = sum.doubleValue(for: HKUnit.count())
+                }
+                
+                DispatchQueue.main.async {
+                    completion(stepCount)
+                }
+            }
+            store.execute(statsQuery)
+            completionHandler()
+        }
         store.execute(query)
     }
 }
