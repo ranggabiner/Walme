@@ -22,11 +22,13 @@ struct DailyQuestsView: View {
     var body: some View {
         ScrollView{
             VStack(alignment: .leading, spacing: 20){
-                HomeHeader(name: viewModel.user?.nickname ?? "Rangga", date: viewModel.selectedDate.formattedString())
+                HomeHeader(
+                    clanName: "Six Nakama",
+                    name: viewModel.user?.nickname ?? "Rangga",
+                    date: viewModel.selectedDate.formattedString())
 
                 TreeProgress(clanName: "Six Nakama", progress: progressValueToEnum)
-                
-                Text("Clan member Progress")
+
                 PersonalProgress(
                     name: viewModel.user?.nickname ?? "Rangga",
                     step: viewModel.stepCount,

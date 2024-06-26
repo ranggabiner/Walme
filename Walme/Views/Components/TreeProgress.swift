@@ -31,16 +31,18 @@ struct TreeProgress: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("\(clanName)'s Tree")
-                .padding(.bottom, UIConfig.Paddings.large)
-            Card {
+        Card {
+            VStack(alignment:.leading, spacing: 0){
+                Text("\(clanName)'s Tree")
+                    .fontWeight(.semibold)
+                    .padding(.bottom, UIConfig.Paddings.large)
                 Image(getImageName(progress: progress))
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-//                    .frame(width: .infinity)
+            
             }
         }
+        
     }
 }
 

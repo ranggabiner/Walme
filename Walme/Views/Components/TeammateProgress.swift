@@ -25,12 +25,13 @@ struct TeammateProgress: View {
     var body: some View {
         Card{
             VStack(alignment: .leading){
-                HStack{
+                HStack(){
                     Text(user.nickname ?? "Rizki")
+                    Spacer()
                     if(isCompleted){
                         Text("Completed")
-                            .font(.title3)
-                            .fontWeight(.medium)
+                            .font(.system(size: 16))
+                            .fontWeight(.semibold)
                             .foregroundStyle(.gray)
                     }else{
                         Button(action: {
