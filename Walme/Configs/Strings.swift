@@ -23,4 +23,10 @@ struct Strings {
         static var iconError: String = "exclamationmark.circle.fill"
     }
     
+    struct Leaderboard {
+        static var teamMentor: String = "Team Mentor"
+        static var sixNakama: String = "Six Nakama"
+        static var teamPeta: String = "Team Peta"
+    }
+    
 }
