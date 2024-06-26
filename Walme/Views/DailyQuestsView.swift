@@ -17,6 +17,7 @@ extension Date{
 }
 
 struct DailyQuestsView: View {
+    @EnvironmentObject var toastService: ToastService
     @StateObject private var viewModel = DailyQuestsViewModel()
     
     var body: some View {
@@ -41,6 +42,7 @@ struct DailyQuestsView: View {
             }
             .padding()
         }.background(.appBackground)
+        .toast(service: toastService)
             
     }
     

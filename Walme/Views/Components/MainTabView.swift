@@ -10,7 +10,8 @@ import SwiftUI
 struct MainTabView: View {
     @Binding var appUser: User?
     @State private var selectedTab = 0
-    
+    @StateObject private var toastService = ToastService()
+
     var body: some View {
         TabView(selection: $selectedTab){
             DailyQuestsView()
@@ -19,12 +20,14 @@ struct MainTabView: View {
                     Text("Quest")
                 }
                 .tag(0)
+                .environmentObject(toastService)
             LeaderboardView()
                 .tabItem (){
                     Image(selectedTab == 1 ? "trophy" : "trophy_unselected")
                     Text("Leaderboard")
                 }
                 .tag(1)
+                .environmentObject(toastService)
         }
     }
 }

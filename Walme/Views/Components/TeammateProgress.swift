@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TeammateProgress: View {
+    @EnvironmentObject var toastService: ToastService
     var user: User
     
     private var notificationColor: Color{
@@ -35,7 +36,19 @@ struct TeammateProgress: View {
                             .foregroundStyle(.gray)
                     }else{
                         Button(action: {
-                            // Code Here
+                            toastService.show(content:Card(
+                                fillColor: .toastFill,
+                                strokeColor: .toastFill
+                            ){
+                                HStack{
+                                    Image(systemName: "checkmark.circle")
+                                    VStack(alignment: .leading){
+                                        Text("Success")
+                                        Text("You remind \(user.nickname ?? "Rizki") to finish the daily step")
+                                            .font(.caption)
+                                    }
+                                }
+                            })
                         }){
                             Image(systemName: "bell.fill")
                                 .foregroundStyle(notificationColor)
@@ -63,7 +76,7 @@ struct TeammateProgress: View {
         email: "rizki@gmail.com",
         nickname: "Rizki",
         dailyStepGoals: "2000",
-        dailyStep: "2000",
+        dailyStep: "1000",
         isCompleted: false
     ))
 }
