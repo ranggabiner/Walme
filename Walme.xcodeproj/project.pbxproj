@@ -10,6 +10,12 @@
 		0E94FA662C240BE500A3429E /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 0E94FA652C240BE500A3429E /* .gitkeep */; };
 		0E94FA692C240C2E00A3429E /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E94FA682C240C2E00A3429E /* UIConfig.swift */; };
 		0EE860012C24429C00568053 /* InputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE860002C24429C00568053 /* InputText.swift */; };
+		571430792C2C062A00D277A5 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 571430782C2C062A00D277A5 /* Auth */; };
+		5714307B2C2C062A00D277A5 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 5714307A2C2C062A00D277A5 /* Functions */; };
+		5714307D2C2C062A00D277A5 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 5714307C2C2C062A00D277A5 /* PostgREST */; };
+		5714307F2C2C062A00D277A5 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 5714307E2C2C062A00D277A5 /* Realtime */; };
+		571430812C2C062A00D277A5 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 571430802C2C062A00D277A5 /* Storage */; };
+		571430832C2C062A00D277A5 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 571430822C2C062A00D277A5 /* Supabase */; };
 		5753955A2C2AD9790020ACCC /* TreeProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575395592C2AD9790020ACCC /* TreeProgress.swift */; };
 		577136372C2AB86000919B37 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577136362C2AB86000919B37 /* HomeHeader.swift */; };
 		8F0535782C2557040010F7B7 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0535772C2557040010F7B7 /* Strings.swift */; };
@@ -51,12 +57,6 @@
 		EFCCE1652C2B5653005BC99C /* PersonalProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCE1642C2B5653005BC99C /* PersonalProgress.swift */; };
 		EFCCE16B2C2C025C005BC99C /* TeammateProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCE16A2C2C025C005BC99C /* TeammateProgress.swift */; };
 		EFD143562C2AB9D0000A9BCB /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD143552C2AB9D0000A9BCB /* ProgressBar.swift */; };
-		EFD143582C2ABA80000A9BCB /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = EFD143572C2ABA80000A9BCB /* Auth */; };
-		EFD1435A2C2ABA80000A9BCB /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = EFD143592C2ABA80000A9BCB /* Functions */; };
-		EFD1435C2C2ABA80000A9BCB /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = EFD1435B2C2ABA80000A9BCB /* PostgREST */; };
-		EFD1435E2C2ABA80000A9BCB /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = EFD1435D2C2ABA80000A9BCB /* Realtime */; };
-		EFD143602C2ABA80000A9BCB /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = EFD1435F2C2ABA80000A9BCB /* Storage */; };
-		EFD143622C2ABA80000A9BCB /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = EFD143612C2ABA80000A9BCB /* Supabase */; };
 		EFD143702C2AC1AD000A9BCB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD1436F2C2AC1AD000A9BCB /* Card.swift */; };
 		EFD185392C243B2400D8EDFA /* HealthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD185382C243B2400D8EDFA /* HealthService.swift */; };
 /* End PBXBuildFile section */
@@ -118,12 +118,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFD1435C2C2ABA80000A9BCB /* PostgREST in Frameworks */,
-				EFD1435A2C2ABA80000A9BCB /* Functions in Frameworks */,
-				EFD143622C2ABA80000A9BCB /* Supabase in Frameworks */,
-				EFD143582C2ABA80000A9BCB /* Auth in Frameworks */,
-				EFD143602C2ABA80000A9BCB /* Storage in Frameworks */,
-				EFD1435E2C2ABA80000A9BCB /* Realtime in Frameworks */,
+				5714307D2C2C062A00D277A5 /* PostgREST in Frameworks */,
+				5714307B2C2C062A00D277A5 /* Functions in Frameworks */,
+				571430832C2C062A00D277A5 /* Supabase in Frameworks */,
+				571430792C2C062A00D277A5 /* Auth in Frameworks */,
+				571430812C2C062A00D277A5 /* Storage in Frameworks */,
+				5714307F2C2C062A00D277A5 /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,12 +290,12 @@
 			);
 			name = Walme;
 			packageProductDependencies = (
-				EFD143572C2ABA80000A9BCB /* Auth */,
-				EFD143592C2ABA80000A9BCB /* Functions */,
-				EFD1435B2C2ABA80000A9BCB /* PostgREST */,
-				EFD1435D2C2ABA80000A9BCB /* Realtime */,
-				EFD1435F2C2ABA80000A9BCB /* Storage */,
-				EFD143612C2ABA80000A9BCB /* Supabase */,
+				571430782C2C062A00D277A5 /* Auth */,
+				5714307A2C2C062A00D277A5 /* Functions */,
+				5714307C2C2C062A00D277A5 /* PostgREST */,
+				5714307E2C2C062A00D277A5 /* Realtime */,
+				571430802C2C062A00D277A5 /* Storage */,
+				571430822C2C062A00D277A5 /* Supabase */,
 			);
 			productName = Walme;
 			productReference = 8F339B262C2199BA008D13A7 /* Walme.app */;
@@ -532,7 +532,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Walme/Preview Content\"";
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = T7VZ3G3TGC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this to track you step";
@@ -549,7 +549,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.Walme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rizki.Walme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -566,7 +566,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Walme/Preview Content\"";
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = T7VZ3G3TGC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this to track you step";
@@ -583,7 +583,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.Walme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rizki.Walme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -626,32 +626,32 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EFD143572C2ABA80000A9BCB /* Auth */ = {
+		571430782C2C062A00D277A5 /* Auth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Auth;
 		};
-		EFD143592C2ABA80000A9BCB /* Functions */ = {
+		5714307A2C2C062A00D277A5 /* Functions */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Functions;
 		};
-		EFD1435B2C2ABA80000A9BCB /* PostgREST */ = {
+		5714307C2C2C062A00D277A5 /* PostgREST */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = PostgREST;
 		};
-		EFD1435D2C2ABA80000A9BCB /* Realtime */ = {
+		5714307E2C2C062A00D277A5 /* Realtime */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Realtime;
 		};
-		EFD1435F2C2ABA80000A9BCB /* Storage */ = {
+		571430802C2C062A00D277A5 /* Storage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Storage;
 		};
-		EFD143612C2ABA80000A9BCB /* Supabase */ = {
+		571430822C2C062A00D277A5 /* Supabase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EF2B5F222C25812600747E58 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
