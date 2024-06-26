@@ -9,28 +9,22 @@ import SwiftUI
 
 struct MainTabView: View {
     @Binding var appUser: Users?
-
+    @State private var selectedTab = 0
+    
     var body: some View {
-        TabView {
-            LeaderboardView()
-                .tabItem {
-                    Label("Leaderboard", systemImage: "trophy")
-                }
-            
-            MyClanView()
-                .tabItem {
-                    Label("Clan", systemImage: "shield.checkered")
-                }
-            
+        TabView(selection: $selectedTab){
             DailyQuestsView()
-                .tabItem {
-                    Label("Daily Quests", systemImage: "list.bullet.clipboard")
+                .tabItem (){
+                    Image(selectedTab == 0 ? "quest" : "quest_unselected")
+                    Text("Quest")
                 }
-            
-            ProfileView(viewModel: ProfileViewModel(appUser: appUser), appUser: $appUser)
-                .tabItem {
-                    Label("Profile", systemImage: "person")
+                .tag(0)
+            LeaderboardView()
+                .tabItem (){
+                    Image(selectedTab == 1 ? "trophy" : "trophy_unselected")
+                    Text("Leaderboard")
                 }
+                .tag(1)
         }
     }
 }
