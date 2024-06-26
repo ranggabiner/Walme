@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @ObservedObject var viewModel: ProfileViewModel
-    @Binding var appUser: Users?
+    @Binding var appUser: User?
 
     var body: some View {
             Button(action: {

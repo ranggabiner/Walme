@@ -22,6 +22,10 @@ struct PersonalProgress: View {
     var step: Double;
     var total: Double = 2000;
     
+    private var isCompleted: Bool{
+        return step >= total
+    }
+    
     var body: some View {
         Card{
             VStack(alignment: .leading, spacing: 12){
@@ -32,7 +36,7 @@ struct PersonalProgress: View {
                 
                 HStack{
                     Card(
-                        fillColor: .personalCard,
+                        fillColor: isCompleted ? .completed : .personalCard,
                         alignment: Alignment(
                         horizontal: .center,
                         vertical: .center
@@ -40,14 +44,15 @@ struct PersonalProgress: View {
                         VStack{
                             Text("Current Steps")
                                 .foregroundStyle(.white)
-                            Text(step.formattedWithSeparator())
-                                .font(.system(size: 32))
+                            
+                            Text( isCompleted ? "Completed" : step.formattedWithSeparator())
+                                .font(.system(size: 28))
                                 .fontWeight(.medium)
                                 .foregroundStyle(.white)
                         }.frame(height: 50)
                     }
                     Card(
-                        fillColor: .personalCard,
+                        fillColor: isCompleted ? .completed : .personalCard,
                         alignment: Alignment(
                         horizontal: .center,
                         vertical: .center
@@ -57,7 +62,7 @@ struct PersonalProgress: View {
                                 .foregroundStyle(.white)
 
                             Text(total.formattedWithSeparator())
-                                .font(.system(size: 32))
+                                .font(.system(size: 28))
                                 .fontWeight(.medium)
                                 .foregroundStyle(.white)
                         }.frame(height: 50)
@@ -66,7 +71,9 @@ struct PersonalProgress: View {
                 
                 ProgressBar(
                     value: step,
-                    total: total
+                    total: total,
+                    progressColor: isCompleted ? .completed : .personalProgressColor1,
+                    progressDecorationColor: isCompleted ? .completedAccent : .personalProgressColor2
                 )
             }
         }
@@ -74,5 +81,5 @@ struct PersonalProgress: View {
 }
 
 #Preview {
-    PersonalProgress(name: "Rangga", step: 1175)
+    PersonalProgress(name: "Rangga", step: 2000)
 }

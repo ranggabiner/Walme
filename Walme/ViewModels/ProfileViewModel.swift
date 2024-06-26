@@ -8,12 +8,12 @@
 import SwiftUI
 
 class ProfileViewModel: ObservableObject {
-    @Published var appUser: Users?
+    @Published var appUser: User?
     @Published var isActivityStarted: Bool = false
     
     private let userManager = UserManager.shared
 
-    init(appUser: Users?) {
+    init(appUser: User?) {
         self.appUser = appUser
     }
     

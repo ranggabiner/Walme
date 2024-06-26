@@ -8,7 +8,7 @@
 import SwiftUI
 
 class SignInViewModel: ObservableObject {
-    @Published var appUser: Users?
+    @Published var appUser: User?
     @Published var errorMessage: String?
     @Published var showErrorAlert: Bool = false
 

@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct Users: Codable {
+struct User: Codable, Identifiable {
     var id: String
     var email: String?
     var nickname: String?
     var dailyStepGoals: String?
+    var dailyStep: String?
     var isCompleted: Bool?
 
     enum CodingKeys: String, CodingKey {
@@ -19,6 +20,7 @@ struct Users: Codable {
         case email
         case nickname
         case dailyStepGoals = "daily_steps_goal"
+        case dailyStep = "daily_steps"
         case isCompleted = "is_completed"
     }
 }
