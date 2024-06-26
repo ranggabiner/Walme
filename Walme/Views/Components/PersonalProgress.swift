@@ -32,7 +32,7 @@ struct PersonalProgress: View {
                 
                 HStack{
                     Card(
-                        fill: .personalCard,
+                        fillColor: .personalCard,
                         alignment: Alignment(
                         horizontal: .center,
                         vertical: .center
@@ -47,7 +47,7 @@ struct PersonalProgress: View {
                         }.frame(height: 50)
                     }
                     Card(
-                        fill: .personalCard,
+                        fillColor: .personalCard,
                         alignment: Alignment(
                         horizontal: .center,
                         vertical: .center

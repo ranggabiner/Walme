@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct Card<Content: View>: View {
-    var fill: Color = .white
+    var fillColor: Color = .white
     var alignment: Alignment = Alignment(horizontal: .leading, vertical: .top)
     @ViewBuilder let content: Content
     
@@ -22,7 +22,7 @@ struct Card<Content: View>: View {
             )
             .background{
                 RoundedRectangle(cornerRadius: 24)
-                    .fill(fill)
+                    .fill(fillColor)
                     .stroke(.cardBorder, style: .init(
                         lineWidth: 2
                     ))
