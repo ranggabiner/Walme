@@ -42,6 +42,7 @@ struct TeammateProgress: View {
                             ){
                                 HStack{
                                     Image(systemName: "checkmark.circle")
+                                        .font(.system(size: 24))
                                     VStack(alignment: .leading){
                                         Text("Success")
                                         Text("You remind \(user.nickname ?? "Rizki") to finish the daily step")
