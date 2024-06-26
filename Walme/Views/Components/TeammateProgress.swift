@@ -8,19 +8,9 @@
 import SwiftUI
 
 struct TeammateProgress: View {
+    @State private var notificationTriggered = false
+    
     var user: User
-    
-    private var notificationColor: Color{
-        if(Double(user.dailyStep!) ?? 0 >= Double(user.dailyStepGoals!) ?? 2000){
-            return .inactiveNotification
-        }else{
-            return .activeNotification
-        }
-    }
-    
-    private var isCompleted: Bool{
-        return Double(user.dailyStep ?? "0.0")! >= Double(user.dailyStepGoals ?? "2000.0")!
-    }
     
     var body: some View {
         Card{
@@ -35,11 +25,20 @@ struct TeammateProgress: View {
                             .foregroundStyle(.gray)
                     }else{
                         Button(action: {
-                            // Code Here
+                            notificationTriggered = true
+                            Timer.scheduledTimer(withTimeInterval: TimeInterval(3), repeats: false){ time in
+                                notificationTriggered = false
+                            }
                         }){
                             Image(systemName: "bell.fill")
                                 .foregroundStyle(notificationColor)
                         }
+                        .alert(isPresented: $notificationTriggered, content: {
+                            Alert(
+                                title: Text("Notification Sent"),
+                                message: Text("You remind \(user.nickname ?? "Rick") to finish the daily step")
+                            )
+                        })
                     }
                    
                     
@@ -55,6 +54,19 @@ struct TeammateProgress: View {
             }
         }
     }
+    
+    private var notificationColor: Color{
+        if(Double(user.dailyStep!) ?? 0 >= Double(user.dailyStepGoals!) ?? 2000){
+            return .inactiveNotification
+        }else{
+            return .activeNotification
+        }
+    }
+    
+    private var isCompleted: Bool{
+        return Double(user.dailyStep ?? "0.0")! >= Double(user.dailyStepGoals ?? "2000.0")!
+    }
+    
 }
 
 #Preview {
@@ -63,7 +75,7 @@ struct TeammateProgress: View {
         email: "rizki@gmail.com",
         nickname: "Rizki",
         dailyStepGoals: "2000",
-        dailyStep: "2000",
+        dailyStep: "1000",
         isCompleted: false
     ))
 }
