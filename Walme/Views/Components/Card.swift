@@ -12,6 +12,7 @@ struct Card<Content: View>: View {
     var fillColor: Color = .white
     var strokeColor: Color = .cardBorder
     var lineWidth: Double = 2
+    var radius: Double = 24
     
     var alignment: Alignment = Alignment(horizontal: .leading, vertical: .top)
     @ViewBuilder let content: Content
@@ -24,7 +25,7 @@ struct Card<Content: View>: View {
                 alignment: alignment
             )
             .background{
-                RoundedRectangle(cornerRadius: 24)
+                RoundedRectangle(cornerRadius: radius)
                     .fill(fillColor)
                     .stroke(strokeColor, style: .init(
                         lineWidth: lineWidth

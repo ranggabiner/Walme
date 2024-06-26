@@ -113,6 +113,8 @@ struct UIConfig {
         static var large  : Double = 12
         /** Represents 24px on screen */
         static var huge   : Double = 24
+        /** Represents 16px on screen */
+        static var normal16   : Double = 16
     }
     
     struct HeightFrameSizes : Sizable {

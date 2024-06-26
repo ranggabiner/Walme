@@ -1,0 +1,24 @@
+[
+  {
+    "clan_id": "clan-001",
+    "owner_id": "user-001",
+    "clan_name": "Six Nakama",
+    "total_user": 3,
+    "total_tree": 12
+  },
+  {
+    "clan_id": "clan-002",
+    "owner_id": "user-004",
+    "clan_name": "Mentor clan",
+    "total_user": 3,
+    "total_tree": 10,
+    
+  },
+  {
+    "clan_id": "clan-003",
+    "owner_id": "user-007",
+    "clan_name": "Team Peta",
+    "total_user": 3,
+    "total_tree": 5
+  }
+]

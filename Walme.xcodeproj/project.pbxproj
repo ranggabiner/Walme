@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0E94FA662C240BE500A3429E /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 0E94FA652C240BE500A3429E /* .gitkeep */; };
 		0E94FA692C240C2E00A3429E /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E94FA682C240C2E00A3429E /* UIConfig.swift */; };
+		0EC259AD2C2C084E004342D7 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC259AC2C2C084E004342D7 /* Protocols.swift */; };
+		0EC259AF2C2C08AC004342D7 /* Clan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC259AE2C2C08AC004342D7 /* Clan.swift */; };
+		0EC259B12C2C08B3004342D7 /* LeaderBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC259B02C2C08B3004342D7 /* LeaderBoard.swift */; };
+		0EC259B32C2C08DD004342D7 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC259B22C2C08DD004342D7 /* APIService.swift */; };
+		0EC259B72C2C114E004342D7 /* DummyDataLeaderboard.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EC259B62C2C114E004342D7 /* DummyDataLeaderboard.json */; };
 		0EE860012C24429C00568053 /* InputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE860002C24429C00568053 /* InputText.swift */; };
 		571430792C2C062A00D277A5 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 571430782C2C062A00D277A5 /* Auth */; };
 		5714307B2C2C062A00D277A5 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 5714307A2C2C062A00D277A5 /* Functions */; };
@@ -65,6 +70,11 @@
 		0E94FA652C240BE500A3429E /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		0E94FA672C240C1400A3429E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0E94FA682C240C2E00A3429E /* UIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfig.swift; sourceTree = "<group>"; };
+		0EC259AC2C2C084E004342D7 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		0EC259AE2C2C08AC004342D7 /* Clan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clan.swift; sourceTree = "<group>"; };
+		0EC259B02C2C08B3004342D7 /* LeaderBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoard.swift; sourceTree = "<group>"; };
+		0EC259B22C2C08DD004342D7 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		0EC259B62C2C114E004342D7 /* DummyDataLeaderboard.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DummyDataLeaderboard.json; sourceTree = "<group>"; };
 		0EE860002C24429C00568053 /* InputText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputText.swift; sourceTree = "<group>"; };
 		575395592C2AD9790020ACCC /* TreeProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeProgress.swift; sourceTree = "<group>"; };
 		577136362C2AB86000919B37 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
@@ -89,7 +99,7 @@
 		8F339B5A2C219CA4008D13A7 /* MyClanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClanViewModel.swift; sourceTree = "<group>"; };
 		8F339B5C2C219D44008D13A7 /* DailyQuestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestsView.swift; sourceTree = "<group>"; };
 		8F339B5E2C219D5C008D13A7 /* DailyQuestsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestsViewModel.swift; sourceTree = "<group>"; };
-		8F339B602C219E4E008D13A7 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		8F339B602C219E4E008D13A7 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaderboardView.swift; path = ../LeaderboardView.swift; sourceTree = "<group>"; };
 		8F339B622C219E5C008D13A7 /* LeaderboadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboadViewModel.swift; sourceTree = "<group>"; };
 		8F339B642C219E8A008D13A7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8F339B662C219E92008D13A7 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -161,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				8F339B412C219A28008D13A7 /* SignInView.swift */,
+				8F339B602C219E4E008D13A7 /* LeaderboardView.swift */,
 				8F339B4C2C219B80008D13A7 /* InitialPersonalitationView.swift */,
 				8F339B642C219E8A008D13A7 /* ProfileView.swift */,
 			);
@@ -220,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				8F339B7C2C21A167008D13A7 /* UserManager.swift */,
+				0EC259AC2C2C084E004342D7 /* Protocols.swift */,
+				0EC259B22C2C08DD004342D7 /* APIService.swift */,
 				8F339B4A2C219AC9008D13A7 /* ClanManager.swift */,
 				8F339B802C21AC71008D13A7 /* SupabaseService.swift */,
 				8F339B7E2C21A333008D13A7 /* SignInApple.swift */,
@@ -258,7 +271,6 @@
 				8F339B762C21A0EA008D13A7 /* JoinClanDetailView.swift */,
 				8F339B582C219C98008D13A7 /* MyClanView.swift */,
 				8F339B5C2C219D44008D13A7 /* DailyQuestsView.swift */,
-				8F339B602C219E4E008D13A7 /* LeaderboardView.swift */,
 				8F339B6C2C219F99008D13A7 /* EditNicknameView.swift */,
 				8F339B6A2C219F7E008D13A7 /* EditDailyStepsGoalView.swift */,
 			);
@@ -268,6 +280,9 @@
 		8F339B3E2C219A0A008D13A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0EC259B02C2C08B3004342D7 /* LeaderBoard.swift */,
+				0EC259AE2C2C08AC004342D7 /* Clan.swift */,
+				0EC259B62C2C114E004342D7 /* DummyDataLeaderboard.json */,
 				8F339B3F2C219A20008D13A7 /* User.swift */,
 			);
 			path = Models;
@@ -342,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC259B72C2C114E004342D7 /* DummyDataLeaderboard.json in Resources */,
 				0E94FA662C240BE500A3429E /* .gitkeep in Resources */,
 				8F339B312C2199BC008D13A7 /* Preview Assets.xcassets in Resources */,
 				8F339B2E2C2199BC008D13A7 /* Assets.xcassets in Resources */,
@@ -359,6 +375,7 @@
 				8F0535782C2557040010F7B7 /* Strings.swift in Sources */,
 				8F339B7F2C21A338008D13A7 /* SignInApple.swift in Sources */,
 				8F339B752C21A03A008D13A7 /* JoinClanViewModel.swift in Sources */,
+				0EC259AF2C2C08AC004342D7 /* Clan.swift in Sources */,
 				8F339B5B2C219CAA008D13A7 /* MyClanViewModel.swift in Sources */,
 				EFD143702C2AC1AD000A9BCB /* Card.swift in Sources */,
 				8F339B832C21B012008D13A7 /* MainTabView.swift in Sources */,
@@ -373,6 +390,7 @@
 				8F339B5F2C219D62008D13A7 /* DailyQuestsViewModel.swift in Sources */,
 				8F339B7B2C21A111008D13A7 /* JoinClanDetailViewModel.swift in Sources */,
 				8F339B6D2C219FA4008D13A7 /* EditNicknameView.swift in Sources */,
+				0EC259B32C2C08DD004342D7 /* APIService.swift in Sources */,
 				8F339B572C219C29008D13A7 /* CreateClanViewModel.swift in Sources */,
 				8F339B2A2C2199BA008D13A7 /* WalmeApp.swift in Sources */,
 				8F339B592C219C9F008D13A7 /* MyClanView.swift in Sources */,
@@ -387,6 +405,7 @@
 				8F339B402C219A22008D13A7 /* User.swift in Sources */,
 				8F339B812C21AC76008D13A7 /* SupabaseService.swift in Sources */,
 				8F339B4B2C219ACE008D13A7 /* ClanManager.swift in Sources */,
+				0EC259AD2C2C084E004342D7 /* Protocols.swift in Sources */,
 				EFD185392C243B2400D8EDFA /* HealthService.swift in Sources */,
 				8F339B632C219E62008D13A7 /* LeaderboadViewModel.swift in Sources */,
 				8F339B612C219E54008D13A7 /* LeaderboardView.swift in Sources */,
@@ -394,6 +413,7 @@
 				8F339B442C219A34008D13A7 /* SignInViewModel.swift in Sources */,
 				8F08817D2C2532BD00CCA732 /* ButtonAction.swift in Sources */,
 				8F339B6B2C219F91008D13A7 /* EditDailyStepsGoalView.swift in Sources */,
+				0EC259B12C2C08B3004342D7 /* LeaderBoard.swift in Sources */,
 				5753955A2C2AD9790020ACCC /* TreeProgress.swift in Sources */,
 				8F339B652C219E8D008D13A7 /* ProfileView.swift in Sources */,
 				8F339B6F2C219FB4008D13A7 /* EditNicknameViewModel.swift in Sources */,
@@ -532,7 +552,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Walme/Preview Content\"";
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = 5KGT723N95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this to track you step";
@@ -549,7 +569,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.Walme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertheo.Walme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -566,7 +586,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Walme/Preview Content\"";
-				DEVELOPMENT_TEAM = DP3K3GBL6K;
+				DEVELOPMENT_TEAM = 5KGT723N95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this to track you step";
@@ -583,7 +603,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solstice.Walme;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertheo.Walme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
