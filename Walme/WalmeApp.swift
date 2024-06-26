@@ -11,7 +11,7 @@ import SwiftUI
 struct WalmeApp: App {
     var body: some Scene {
         WindowGroup {
-            DailyQuestsView()
+            ContentView()
         }
     }
 }
