@@ -72,7 +72,7 @@ struct LeaderboardView: View {
                 Card(fillColor: .white, strokeColor: .strokeColor1, lineWidth: 3, radius: 12) {
                     HStack {
                         Image("avatar-leaderboard")
-                        Text("These are the clan who are the most ardent to our missions.")
+                        Text(Strings.Leaderboard.textCard)
                     }
                 }.frame(width: 360, height: 60)
             }.offset(CGSize(width: 0, height: -120.0))

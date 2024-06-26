@@ -27,6 +27,7 @@ struct Strings {
         static var teamMentor: String = "Team Mentor"
         static var sixNakama: String = "Six Nakama"
         static var teamPeta: String = "Team Peta"
+        static var textCard: String = "These are the clan who are the most ardent to our missions."
     }
     
 }
