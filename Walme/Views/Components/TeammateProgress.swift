@@ -18,24 +18,38 @@ struct TeammateProgress: View {
         }
     }
     
+    private var isCompleted: Bool{
+        return Double(user.dailyStep ?? "0.0")! >= Double(user.dailyStepGoals ?? "2000.0")!
+    }
+    
     var body: some View {
         Card{
             VStack(alignment: .leading){
                 HStack{
                     Text(user.nickname ?? "Rizki")
-                    Button(action: {
-                        // Code Here
-                    }){
-                        Image(systemName: "bell.fill")
-                            .foregroundStyle(notificationColor)
+                    if(isCompleted){
+                        Text("Completed")
+                            .font(.title3)
+                            .fontWeight(.medium)
+                            .foregroundStyle(.gray)
+                    }else{
+                        Button(action: {
+                            // Code Here
+                        }){
+                            Image(systemName: "bell.fill")
+                                .foregroundStyle(notificationColor)
+                        }
                     }
+                   
                     
                 }
                 
                 ProgressBar(
                     value: Double(user.dailyStep!) ?? 0.0,
                     total: Double(user.dailyStepGoals!) ?? 0.0,
-                    height: 24
+                    height: 24,
+                    progressColor: isCompleted ? .completed : .personalProgressColor1,
+                    progressDecorationColor: isCompleted ? .completedAccent : .personalProgressColor2
                 )
             }
         }
@@ -48,7 +62,7 @@ struct TeammateProgress: View {
         email: "rizki@gmail.com",
         nickname: "Rizki",
         dailyStepGoals: "2000",
-        dailyStep: "1000",
+        dailyStep: "2000",
         isCompleted: false
     ))
 }

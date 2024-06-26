@@ -38,7 +38,7 @@ struct TreeProgress: View {
                 Image(getImageName(progress: progress))
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: .infinity)
+//                    .frame(width: .infinity)
             }
         }
     }

@@ -10,8 +10,10 @@ import SwiftUI
 import Combine
 
 class DailyQuestsViewModel: ObservableObject {
+    var user = UserManager.shared.getAuthenticatedUser()
+
     @Published var isGoalCompleted: Bool = false
-    @Published var stepCountGoal: Double = 2000.0
+    @Published var stepCountGoal: Double = 2000
     @Published var stepCount: Double = 0.0
     @Published var selectedDate: Date = Date()
     
@@ -54,6 +56,7 @@ class DailyQuestsViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     init() {
+        self.stepCountGoal = Double(user?.dailyStepGoals ?? "2000.0")!
         healthStore.requestAuthorization{ success in
             self.fetchStepCount(for: self.selectedDate)
         }

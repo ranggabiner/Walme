@@ -13,7 +13,20 @@ class UserManager {
     
     private init() {}
     
+    private let userKey = "authenticatedUser"
+    
     let client = SupabaseService().client
+    
+    
+    func getAuthenticatedUser() -> User? {
+        let defaults = UserDefaults.standard
+        if let savedUserData = defaults.data(forKey: userKey) {
+            if let decodedUser = try? JSONDecoder().decode(User.self, from: savedUserData) {
+                return decodedUser
+            }
+        }
+        return nil
+    }
     
     func getCurrentSession() async throws -> User {
         let session = try await client.auth.session
@@ -29,8 +42,13 @@ class UserManager {
         try await client.auth.signOut()
     }
     
-    func insertPersonalitation(_ username: User) async throws -> Bool {
-        let insertResponse = try await client.database.from("users").insert(username).execute()
+    func insertPersonalitation(_ user: User) async throws -> Bool {
+        let defaults = UserDefaults.standard
+        if let encodedUser = try? JSONEncoder().encode(user) {
+            defaults.set(encodedUser, forKey: userKey)
+        }
+        
+        let insertResponse = try await client.database.from("users").insert(user).execute()
         return insertResponse.status == 201
     }
 }
