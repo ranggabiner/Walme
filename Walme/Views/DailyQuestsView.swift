@@ -23,23 +23,13 @@ struct DailyQuestsView: View {
                 displayedComponents: [.date]
             ).datePickerStyle(.graphical)
             
-            ProgressBar(
-                value: viewModel.stepCount,
+            PersonalProgress(
+                name: "Rangga",
+                step: viewModel.stepCount,
                 total: viewModel.stepCountGoal
             )
             
-            ProgressBar(
-                value: viewModel.stepCount,
-                total: viewModel.stepCountGoal,
-                height: 60
-                
-            )
-            
-            ProgressView(value: progressValue, total: viewModel.stepCountGoal)
-                .progressViewStyle(LinearProgressViewStyle())
-                .padding()
-            
-            Slider(value: $viewModel.stepCount, in: 0...2000)
+            Slider(value: $viewModel.stepCount, in: 0...2000).padding()
             
             Text("Steps: \(Int(viewModel.stepCount))")
         }
