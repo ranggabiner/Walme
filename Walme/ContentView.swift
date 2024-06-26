@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var appUser: Users? = nil
+    @State var appUser: User? = nil
     @State var isActivityStarted: Bool = false
 
     var body: some View {

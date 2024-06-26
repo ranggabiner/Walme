@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SignInView: View {
     @StateObject var viewModel = SignInViewModel()
-    @Binding var appUser: Users?
+    @Binding var appUser: User?
 
     var body: some View {
         VStack {

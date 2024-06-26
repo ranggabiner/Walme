@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InitialPersonalitationView: View {
     @ObservedObject var viewModel: InitialPersonalitationViewModel
-    @Binding var appUser: Users?
+    @Binding var appUser: User?
     @Binding var isActivityStarted: Bool
 
     var body: some View {

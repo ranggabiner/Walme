@@ -13,6 +13,9 @@ struct ProgressBar: View {
     var total:Double = 2000;
     var height: Double = 40;
     
+    var progressColor: Color = .personalProgressColor1
+    var progressDecorationColor: Color = .personalProgressColor2
+    
     var body: some View {
         GeometryReader{geometry in
             ZStack(alignment: .leading){
@@ -22,11 +25,11 @@ struct ProgressBar: View {
                 
                 if (value < 250) {
                     Capsule()
-                        .fill(.personalProgressColor1)
+                        .fill(progressColor)
                         .frame(width: 250/total * geometry.size.width)
                         .overlay{
                             Capsule()
-                                .fill(.personalProgressColor2)
+                                .fill(progressDecorationColor)
                                 .frame(
                                     width: 250/total * geometry.size.width / 2.5,
                                     height: height / 2.5
@@ -38,11 +41,11 @@ struct ProgressBar: View {
                         }
                 } else {
                     Capsule()
-                        .fill(.personalProgressColor1)
+                        .fill(progressColor)
                         .frame(width: value <= total ? value/total * geometry.size.width : geometry.size.width)
                         .overlay{
                             Capsule()
-                                .fill(.personalProgressColor2)
+                                .fill(progressDecorationColor)
                                 .frame(
                                     width: value <= total ? value/total * geometry.size.width / 2.5 : geometry.size
                                         .width / 2.5,

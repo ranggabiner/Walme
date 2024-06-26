@@ -15,6 +15,41 @@ class DailyQuestsViewModel: ObservableObject {
     @Published var stepCount: Double = 0.0
     @Published var selectedDate: Date = Date()
     
+    @Published var teammatesData: [User] = [
+        User(
+            id: UUID().uuidString,
+            email: "rizki@gmail.com",
+            nickname: "Rizki",
+            dailyStepGoals: "2000",
+            dailyStep: "2000",
+            isCompleted: true
+        ),
+        User(
+            id: UUID().uuidString,
+            email: "ferry@gmail.com",
+            nickname: "Ferry",
+            dailyStepGoals: "2000",
+            dailyStep: "1250",
+            isCompleted: false
+        ),
+        User(
+            id: UUID().uuidString,
+            email: "hans@gmail.com",
+            nickname: "Hans",
+            dailyStepGoals: "2000",
+            dailyStep: "2000",
+            isCompleted: true
+        ),
+        User(
+            id: UUID().uuidString,
+            email: "robert@gmail.com",
+            nickname: "Robert",
+            dailyStepGoals: "2000",
+            dailyStep: "800",
+            isCompleted: false
+        ),
+    ]
+    
     private var healthStore = HealthService()
     private var cancellables = Set<AnyCancellable>()
     

@@ -8,7 +8,7 @@
 import SwiftUI
 
 class InitialPersonalitationViewModel: ObservableObject {
-    @Published var appUser: Users?
+    @Published var appUser: User?
     @Published var nickname: String = ""
     @Published var dailySteps: String = ""
     @Published var showNicknameError: Bool = false
@@ -19,7 +19,7 @@ class InitialPersonalitationViewModel: ObservableObject {
     
     private let userManager = UserManager.shared
 
-    init(appUser: Users?) {
+    init(appUser: User?) {
         self.appUser = appUser
     }
     
@@ -58,7 +58,7 @@ class InitialPersonalitationViewModel: ObservableObject {
                 return
             }
             
-            let newUser = Users(id: userId, email: userEmail, nickname: nickname, dailyStepGoals: dailySteps, isCompleted: isCompleted)
+            let newUser = User(id: userId, email: userEmail, nickname: nickname, dailyStepGoals: dailySteps, isCompleted: isCompleted)
             
             do {
                 let isSuccess = try await userManager.insertPersonalitation(newUser)
